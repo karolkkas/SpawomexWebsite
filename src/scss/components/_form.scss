@@ -1,0 +1,76 @@
+/* ================================================= FORM ================================================= */
+.form {
+    /* Bootstrap reset*/
+    & [class^=col] {
+        padding:0;
+    }
+    /* ===============*/
+    
+    &__group {
+        position: relative;
+        margin-bottom: 4rem;
+    }
+    
+    &__input {
+        font-size: 1.5rem;
+        padding: 1.5rem 2rem;
+        background-color: rgba($color-white, .9);
+        border: none;
+        font-family: inherit;
+        transition: .2s;
+        border-bottom: 3px solid transparent;
+        width: 90%;
+        display: block;
+        margin: 0 auto;
+        
+        &:hover, &:focus {
+            cursor: text;
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 .5rem 2rem rgba($color-black, .25);
+        }
+    }
+    
+    &__label {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-left:2rem;
+        margin-top: 1rem;
+        display:block;
+        position: absolute;
+        top:0;
+        left:5%;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+        color: $font-color-light;
+    }
+    
+    &__input:focus + &__label {
+        top:5.5rem;
+        left:5%;
+        font-size: 1.5rem;
+        opacity:1;
+        visibility: visible;
+    }
+    
+    &__input:focus:invalid + &__label {
+        color: $color-invalid;
+    }
+    
+    &__textarea {
+        resize: none;
+        border-radius:0;
+        width: 95%;
+        font-size: 1.5rem;
+        padding: 1.5rem 2rem;
+        background-color: rgba($color-white, .9);
+        border: none;
+
+        &:hover, &:focus {
+            cursor: text;
+        }
+    }
+}

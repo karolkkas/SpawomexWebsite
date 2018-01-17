@@ -1,0 +1,18 @@
+/* ============================================ SERVICE-BOX ============================================ */
+.service-box {
+    background: rgba($color-black, .5);
+    padding:2rem 6rem;
+    margin-bottom:2rem;
+    transition: .5s;
+    border: 1px solid rgba(20,20,20,.2);
+    color: $color-white;
+
+    &__title {
+        margin-bottom:1rem;
+    }
+    
+    &__text {
+        text-align: center;
+        font-size: 1.6rem;
+    }
+}

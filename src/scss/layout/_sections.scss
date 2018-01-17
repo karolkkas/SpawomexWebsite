@@ -1,0 +1,43 @@
+/* ============================================ Sections ============================================ */
+/* SECTION MAJOR SETTINGS*/
+.wrapper-90 {
+    width: 90%;
+}
+
+.section-set {
+    padding: 8rem 0;
+    width: 90%;
+    margin:0 auto;
+}
+
+/* SECTION ABOUT */
+.section-about {
+    margin-top: -8rem;
+}
+
+/* SECTION SERVICE */
+.section-services {
+    background: 
+        linear-gradient(183deg, $bg-color 11%, rgba(darken($color-primary-medium, 80),.9) 10%, rgba($color-primary-dark, .5) 90%, $bg-color 90.1%),
+        url('../img/welding-dark.jpg') no-repeat  center/cover;
+    width: 100%;
+    padding:15rem 0;
+    margin-top: -5rem;
+}
+
+/* SECTION WORK */
+.section-work {
+    margin-top: -10rem;
+    
+    & [class^=col] {
+        padding:0;
+    }
+}
+
+/* SECTION CONTACT */
+.section-contact {
+    background: linear-gradient(180deg, rgba($color-tertiary-light, 0.5) 40%, transparent 100%), $color-black;
+    width: 100%;
+    padding:5rem 0;
+}
+

@@ -1,0 +1,38 @@
+/* ============================================ Header ============================================ */
+.header {
+    background: 
+        linear-gradient(177deg, rgba($color-primary-medium,.5) 0%, rgba(darken($color-primary-dark, 80), .9) 86%, $bg-color 86.1%),
+        url('../img/background.jpg') no-repeat top/cover;
+    height: 100vh;
+    position: relative;
+    
+    &__logo-box {
+        margin:0 auto;
+        position: relative;
+        top: 40%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        text-shadow: .5rem .5rem 2rem $shadow-strong;
+        
+        &::after {
+            content: '';
+            width: 30rem;
+            border-bottom: .5rem solid $color-tertiary-dark;
+            position: absolute;
+            left:50%;
+            top: 71%;
+            transform: translateX(-50%);
+            animation: moveInBottom2 .75s ease-out 1s backwards;
+        }
+    }
+    
+    &__btn {
+        position: absolute;
+        top:70%;
+        width: 100%;
+        text-align: center;
+        color: $color-tertiary-dark;
+        font-size: 2.5rem;
+    }
+}

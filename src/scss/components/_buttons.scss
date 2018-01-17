@@ -1,0 +1,121 @@
+/* ================================================= BUTTONS ================================================= */
+.btn {
+    &, &:link, &:visited {
+        padding: 1.5rem 4rem;
+        border:0;
+        outline: 0;
+        display: inline-block;
+        transition: .2s;
+        border-radius: 10rem;
+        text-transform: uppercase;
+        position: relative;
+        backface-visibility: hidden;
+        
+        //Change for the <button> element
+        cursor: pointer;
+    }
+        
+    &--primary {
+        background-color: $btn-color-primary;
+        color: $color-tertiary-dark;
+    }
+    
+    &--primary::after {
+        background-color: $btn-color-primary;
+    }
+    
+    &--secondary {
+        background-color: $btn-color-secondary;
+        color: $font-color-light;
+    }
+        
+    &--secondary::after {
+        background-color: $btn-color-secondary;
+    }
+
+    &--animated {
+        animation: moveInBottom .5s ease-out 2s backwards;
+    }
+
+    &:hover, &:focus {
+        transform: translateY(-0.3rem);
+        box-shadow: 0 1rem 2rem $shadow-light;
+    }
+
+    &:active {
+        transform: translateY(-0.1rem);
+        box-shadow: 0 .5rem 1rem $shadow-light;
+    }
+
+    &::after {
+        content: '';
+        height: 100%;
+        width: 100%;
+        display: inline-block;
+        border-radius: 10rem;
+        position: absolute;
+        top:0;
+        left:0;
+        z-index: -1;
+        transition: .3s;
+    }
+
+    &:hover::after, &:focus::after {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+.btn-text {
+    &:link, &:visited {
+        font-size: $base-font-size;
+        color: $btn-color-tertiary;
+        display: inline-block;
+        border-bottom: 1px solid $btn-color-tertiary;
+        padding: 3px;
+        transition: .2s;
+    }
+    
+    &:hover, &:focus {
+        background-color: $btn-color-tertiary;
+        color:$font-color-light;
+        box-shadow: 0 1rem 2rem $shadow-light;
+        transform: translateY(-2px);
+    }
+    
+    &:active {
+        box-shadow: 0 .5rem 1rem $shadow-light;
+        transform: translateY(0);
+    }
+}
+
+/* ====== Arrow =======*/
+.arrow-up {
+    display:block;
+    width: 10rem;
+    height: 10rem;
+    position: fixed;
+    bottom:3rem;
+    right:3rem;
+    font-size: 8rem;
+    z-index: 200;
+    text-shadow:.5rem .5rem 2rem $shadow-medium;
+    opacity:0;
+    visibility: hidden;
+    transition: .5s;
+    
+    &--visible {
+        opacity:1;
+        visibility: visible;
+    }
+    
+    & .fa {
+    color: $color-tertiary-light;
+    transition: .5s;
+    
+    &:hover, &:focus {
+        color: $color-tertiary-dark;
+        cursor: pointer;
+        }
+    }
+}

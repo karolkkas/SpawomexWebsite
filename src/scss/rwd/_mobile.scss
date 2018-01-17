@@ -1,0 +1,51 @@
+/* ============================================ Mobile Layout ============================================ */
+@media (max-width: 999px) {
+    .feature-box {
+        width: 70%;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+    }
+    
+    .iframe {
+        margin-bottom: 4rem;
+    }
+}
+@media screen and (max-width: 767px) {
+    .form__textarea, .form__input {
+        width: 100%;
+    }
+    .heading-primary--main {
+        font-size: 10.5vw;
+    }
+    
+    .heading-primary--sub {
+        font-size: 2.6vw;
+    }
+    
+    .header__logo-box::after {
+        width: 40vw;
+        border-bottom: .4rem solid $color-tertiary-dark;
+    }    
+}
+
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 9px;
+    }
+    
+    .navbar-brand {
+       display: none; 
+    }
+
+    .feature-box {
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    html {
+        font-size: 8px;
+    }
+}

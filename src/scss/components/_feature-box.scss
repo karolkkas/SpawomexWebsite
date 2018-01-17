@@ -1,0 +1,34 @@
+/* ================================================= FEATURE-BOX ================================================= */
+.feature-box {
+    background-color: rgba($color-tertiary-light, .2);
+    font-size: 1.6rem;
+    padding: 6rem 4rem;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem $shadow-light;
+    transition: .2s;
+    
+    &:hover {
+        transform: translateY(-1.3rem) scale(1.05);
+        box-shadow: 0 1rem 2rem $shadow-medium;
+        background-color: rgba($color-tertiary-light, .3);
+    }
+    
+    &__icon.fa {
+        font-size: 8rem;
+        display:inline-block;
+        color: $color-tertiary-light;
+        margin-bottom: 2rem;
+        text-shadow: .5rem 1rem 2rem $shadow-light;
+    }   
+    
+    &__heading {
+        color: $font-color-dark;
+        margin-bottom: 1.6rem;
+    }
+    
+    &__text {
+        text-align: justify;
+    }
+}
+

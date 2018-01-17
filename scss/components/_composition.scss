@@ -1,0 +1,63 @@
+.composition {
+    &__box {
+        position: relative;
+        transition: .7s;
+        
+        /*&::after {
+            content: '';
+            display:block;
+            background-color: rgba($color-black, .15);
+            width:100%;
+            height: 100%;
+            position: absolute;
+            top:0;
+            left:0;
+            z-index: 10;
+            transition: .5s;
+            opacity:0;
+            visibility: hidden;
+        }
+        
+        &:hover::after {
+            opacity:1;
+            visibility: visible;
+            cursor: pointer;
+        }*/
+    }
+
+    &__img {
+        transition: .7s;
+        
+        &:hover {
+        transform: scale(0.95);
+        cursor: pointer;
+            
+        }
+    }
+    
+    &__icon {
+            font-size: 5rem !important;
+            position: absolute;
+            top:80%;
+            left:50%;
+            transform: translate(-50%, -30%);
+            color: $color-white;
+            transition: .5s;
+            opacity:0;
+            visibility: hidden;
+            backface-visibility: hidden;
+            cursor: pointer;
+        }
+
+    &__box:hover &__icon{
+        top:50%;
+        opacity:1;
+        visibility: visible;
+        
+        }
+
+    &:hover &__box:not(:hover) {
+        opacity: .4;
+        
+    }
+}

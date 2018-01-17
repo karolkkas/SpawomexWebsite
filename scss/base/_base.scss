@@ -1,0 +1,17 @@
+/* ================================================= BASE ================================================= */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: $base-ff;
+    font-size: $base-font-size;
+    line-height: 1.7;
+    color:$font-color-dark;
+    font-size: $base-font-size;
+    background: $bg-color;
+}
+
+.visibility-hidden {
+    display:none;
+}

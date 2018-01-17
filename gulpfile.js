@@ -1,9 +1,4 @@
-/*
-npm i -D browser-sync gulp-sass gulp-sourcemaps gulp-autoprefixer gulp-clean-css gulp-uglify gulp-concat gulp-imagemin gulp-changed 
-npm i -D gulp-html-replace gulp-htlmin 
-npm i -D del run-sequence
-*/
-
+/*eslint-disable*/
 var gulp = require('gulp');
 var browserSync = require('browser-sync');
 var sass = require('gulp-sass');
@@ -45,7 +40,7 @@ gulp.task('reload', function() {
 gulp.task('serve', ['sass'], function() {
   browserSync({
     server: config.src,
-      browser: ["chrome"] /*tutaj wpisać nazwy przeglądarek*/
+      browser: ["chrome"]
   });
 
   gulp.watch([config.htmlin, config.jsin], ['reload']);

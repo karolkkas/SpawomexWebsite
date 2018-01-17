@@ -1,6 +1,6 @@
-$(document).ready(() => {
+$(document).ready(function() {
   $(window).scroll(function () {
-    let location = $(this).scrollTop();
+    var location = $(this).scrollTop();
     if (location < 70) {
       $('nav').removeClass('transparent');
       $('.arrow-up').removeClass('arrow-up--visible');
@@ -10,19 +10,19 @@ $(document).ready(() => {
     }
   });
 
-  let scrollLink = $('.scrollTo');
+  var scrollLink = $('.scrollTo');
   scrollLink.click(function (e) {
     e.preventDefault();
     $('body,html').animate({
       scrollTop: $(this.hash).offset().top }, 500);
   });
 
-  $('.nav a').click(() => {
+  $('.nav a').click(function() {
         $(".navbar-collapse").removeClass("in");
         $('body').removeClass("blocked");
     });
 
-  $('.navbar-toggle').click(() => {
+  $('.navbar-toggle').click(function() {
         $('body').toggleClass("blocked");
     });
 });

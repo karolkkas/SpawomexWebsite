@@ -67,11 +67,13 @@ gulp.task('css', function() {
     .pipe(gulp.dest(config.cssout));
 });
 
-gulp.task('js', function() {
-  return gulp.src(config.jsin)
-    .pipe(uglify())
-    .pipe(gulp.dest(config.jsout));
-});
+gulp.task('js', function(cb) {
+  pump([
+    gulp.src(config.jsin),
+    uglify(),
+    gulp.dest(config.jsout)
+    ], cb);
+  });
 
 gulp.task('img', function() {
   return gulp.src(config.imgin)

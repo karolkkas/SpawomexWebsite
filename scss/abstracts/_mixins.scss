@@ -34,10 +34,3 @@
         .fa-#{$i} {font-size:$font-size -(2*0.3rem)+($i*0.3rem) !important;}
     }
 }
-
-@mixin skew($deg) {
-    -webkit-transform: skew($deg);
-    -moz-transform: skew($deg);
-    -o-transform: skew($deg);
-    transform: skewX($deg);
-}

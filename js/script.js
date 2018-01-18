@@ -63,7 +63,7 @@ $(document).ready(function () {
 
   function validateTelInput(input) {
     let isValid = false;
-    const regex = /^([0-9]{3}(-|\s)?){2}[0-9]{3}$/gi;
+    const regex = new RegExp('^([0-9]{3}(-|\s)?){2}[0-9]{3}$','gi');
     if (regex.test(input.value)) {
       isValid = true;
     }
@@ -111,28 +111,26 @@ $(document).ready(function () {
     form.addEventListener('submit', function(e) {
         e.preventDefault();
         let validated = true;
-        const inputs = form.querySelectorAll('input');
-        const textarea = form.querySelector('.form__textarea');
+        const inputs = form.querySelectorAll('input, .form__textarea');
 
         [].forEach.call(inputs, function(input) {
             if (input.nodeName.toUpperCase() == 'INPUT') {
-                const type = input.type.toUpperCase();
+                let type = input.type.toUpperCase();
                 if (type == 'TEXT') {
-                    if (!validateTextInput(input)) validated = false;
+                  if (!validateTextInput(input)) validated = false;
+                }
+                if (type == 'TEL') {
+                  if (!validateTelInput(input)) validated = false;
                 }
                 if (type == 'EMAIL') {
-                    if (!validateEmailInput(input)) validated = false;
+                  if (!validateEmailInput(input)) validated = false;
                 }
-                if (type == 'Tel') {
-                  if (!validateTelInput(input)) validated = false;
+                if (type == 'TEXTAREA') {
+                  if (!checkTextarea(input)) validated = false;
+                }
               }
-            }
-          });
-
-          if (textarea.nodeName.toUpperCase() == 'TEXTAREA') {
-              if (checkTextarea(this)) validated = false;
-          }
-
+            });
+            
         if (validated) {
             this.submit();
         } else {

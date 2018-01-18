@@ -18,7 +18,7 @@
         border: none;
         font-family: inherit;
         transition: .2s;
-        border-bottom: 3px solid transparent;
+        border:2px solid $color-white;
         width: 90%;
         display: block;
         margin: 0 auto;
@@ -30,6 +30,11 @@
         &:focus {
             outline: none;
             box-shadow: 0 .5rem 2rem rgba($color-black, .25);
+        }
+        
+        &.error {
+            border:2px solid rgba(#aa1515, .9); 
+            box-shadow: inset 0 0 2rem .5px rgba(#aa1515, .9);
         }
     }
     
@@ -56,10 +61,6 @@
         visibility: visible;
     }
     
-    &__input:focus:invalid + &__label {
-        color: $color-invalid;
-    }
-    
     &__textarea {
         resize: none;
         border-radius:0;
@@ -67,10 +68,17 @@
         font-size: 1.5rem;
         padding: 1.5rem 2rem;
         background-color: rgba($color-white, .9);
-        border: none;
+        border: 2px solid $color-white;
+        outline: 0;
+        transition: .2s;
 
         &:hover, &:focus {
             cursor: text;
+        }
+
+        &.error {
+            border:2px solid rgba(#aa1515, .9); 
+            box-shadow: inset 0 0 2rem .5px rgba(#aa1515, .9);
         }
     }
 }

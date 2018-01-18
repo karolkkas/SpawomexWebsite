@@ -13,6 +13,7 @@ var htmlReplace = require('gulp-html-replace');
 var htmlMin = require('gulp-htmlmin');
 var del = require('del');
 var sequence = require('run-sequence');
+var pump = require('pump');
 
 var config = {
   dist: 'dist/',
